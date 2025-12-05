@@ -1,0 +1,425 @@
+# ==============================================================================
+# KASHI LMS - Learning Management System
+# ==============================================================================
+# 
+# PROJECT INFORMATION
+# -------------------
+# Project Name: Kashi LMS (StellixSoft LMS)
+# Framework: Laravel 11.x with Livewire 3.x
+# Description: A comprehensive Learning Management System with course management,
+#              video hosting, payment processing, quizzes, assignments, and more.
+#
+# KEY FEATURES:
+# - Course Management (Online/On-site)
+# - Video Hosting (Vimeo Integration)
+# - Payment Processing (Stripe)
+# - Quizzes & Assignments
+# - Microsoft OAuth Authentication
+# - Calendar & Event Management
+# - Certificate Generation
+# - Course Analytics
+# - Multi-role System (Admin, Tutor, Learner)
+# - Wishlist & Reviews
+# - Email Notifications
+#
+# ==============================================================================
+# APPLICATION SETTINGS
+# ==============================================================================
+
+# Application Name - Displayed throughout the application
+APP_NAME="Kashi LMS"
+
+# Application Environment
+# Options: local, staging, production
+# - local: Development environment with debug enabled
+# - staging: Pre-production testing environment
+# - production: Live production environment
+APP_ENV=local
+
+# Application Key - DO NOT SHARE THIS KEY
+# Generated automatically with: php artisan key:generate
+# This key is used for encryption and should be unique for each installation
+APP_KEY=base64:HybJLDh9N1e8dlKaiSfTOiMXS8lmP5nvH1rbH2w6iis=
+
+# Application Debug Mode
+# Set to true for development (shows detailed error messages)
+# Set to false for production (shows generic error pages)
+APP_DEBUG=true
+
+# Application Timezone
+# Set your server's timezone (e.g., UTC, America/New_York, Asia/Karachi)
+APP_TIMEZONE=UTC
+
+# Application URL
+# Your application's base URL (without trailing slash)
+# For localhost: http://localhost or http://localhost:8000
+# For production: https://yourdomain.com
+APP_URL=http://localhost
+
+# ==============================================================================
+# LOCALIZATION SETTINGS
+# ==============================================================================
+
+# Default Application Locale
+APP_LOCALE=en
+
+# Fallback Locale (used when translation is missing)
+APP_FALLBACK_LOCALE=en
+
+# Faker Locale (for generating fake data in seeders)
+APP_FAKER_LOCALE=en_US
+
+# ==============================================================================
+# MAINTENANCE MODE
+# ==============================================================================
+
+# Maintenance Driver
+# Options: file, database
+# - file: Uses storage/framework/down file
+# - database: Uses database table (requires migration)
+APP_MAINTENANCE_DRIVER=file
+
+# ==============================================================================
+# SERVER CONFIGURATION
+# ==============================================================================
+
+# PHP CLI Server Workers (for development server)
+PHP_CLI_SERVER_WORKERS=4
+
+# Bcrypt Rounds (password hashing strength)
+# Higher = more secure but slower (default: 12)
+BCRYPT_ROUNDS=12
+
+# ==============================================================================
+# LOGGING CONFIGURATION
+# ==============================================================================
+
+# Log Channel
+# Options: stack, single, daily, slack, syslog, errorlog, null
+LOG_CHANNEL=stack
+
+# Log Stack (when using 'stack' channel)
+LOG_STACK=single
+
+# Log Deprecations Channel
+LOG_DEPRECATIONS_CHANNEL=null
+
+# Log Level
+# Options: debug, info, notice, warning, error, critical, alert, emergency
+LOG_LEVEL=debug
+
+# ==============================================================================
+# DATABASE CONFIGURATION
+# ==============================================================================
+# 
+# IMPORTANT: Create the database before running migrations
+# 
+# For WAMP/XAMPP:
+# 1. Open phpMyAdmin (http://localhost/phpmyadmin)
+# 2. Create a new database (e.g., 'kashi_lms' or 'lms')
+# 3. Update DB_DATABASE below with your database name
+# 4. Run: php artisan migrate
+#
+# For production:
+# - Use strong database credentials
+# - Consider using environment-specific databases
+# ==============================================================================
+
+# Database Connection Type
+# Options: mysql, pgsql, sqlite, sqlsrv
+DB_CONNECTION=mysql
+
+# Database Host
+# For localhost: 127.0.0.1 or localhost
+# For remote: your-database-host.com
+DB_HOST=127.0.0.1
+
+# Database Port
+# MySQL default: 3306
+# PostgreSQL default: 5432
+DB_PORT=3306
+
+# Database Name
+# Create this database in phpMyAdmin before running migrations
+DB_DATABASE=lms
+
+# Database Username
+# WAMP/XAMPP default: root
+# Production: Use a dedicated database user
+DB_USERNAME=root
+
+# Database Password
+# WAMP/XAMPP default: (empty)
+# Production: Use a strong password
+DB_PASSWORD=
+
+# ==============================================================================
+# SESSION CONFIGURATION
+# ==============================================================================
+
+# Session Driver
+# Options: file, cookie, database, memcached, redis, array
+# Recommended: database (for multi-server setups)
+SESSION_DRIVER=database
+
+# Session Lifetime (in minutes)
+# Default: 120 (2 hours)
+SESSION_LIFETIME=120
+
+# Session Encryption
+SESSION_ENCRYPT=false
+
+# Session Path
+SESSION_PATH=/
+
+# Session Domain
+# Leave null for default, or set to your domain (e.g., .yourdomain.com)
+SESSION_DOMAIN=null
+
+# ==============================================================================
+# BROADCASTING & QUEUE CONFIGURATION
+# ==============================================================================
+
+# Broadcast Connection
+# Options: pusher, redis, log, null
+# For real-time features (currently using log for development)
+BROADCAST_CONNECTION=log
+
+# Filesystem Disk
+# Options: local, public, s3
+# - local: Stores files in storage/app
+# - public: Stores files in storage/app/public (accessible via public link)
+# - s3: Amazon S3 storage
+FILESYSTEM_DISK=local
+
+# Queue Connection
+# Options: sync, database, redis, sqs, beanstalkd
+# - sync: Executes jobs immediately (development)
+# - database: Uses database queue table (requires: php artisan queue:table)
+# - redis: Uses Redis (requires Redis server)
+QUEUE_CONNECTION=database
+
+# ==============================================================================
+# CACHE CONFIGURATION
+# ==============================================================================
+
+# Cache Store
+# Options: apc, array, database, file, memcached, redis, dynamodb, octane, null
+# Recommended: database (for development), redis (for production)
+CACHE_STORE=database
+
+# Cache Prefix (for shared cache environments)
+CACHE_PREFIX=
+
+# ==============================================================================
+# MEMCACHED CONFIGURATION (Optional)
+# ==============================================================================
+
+MEMCACHED_HOST=127.0.0.1
+
+# ==============================================================================
+# REDIS CONFIGURATION (Optional)
+# ==============================================================================
+
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+# ==============================================================================
+# MAIL CONFIGURATION
+# ==============================================================================
+#
+# The application sends various emails:
+# - Email Verification
+# - Password Reset
+# - Course Announcements
+# - Certificate Delivery
+# - Tutor Approval/Rejection
+# - Help Request Responses
+#
+# For local development, use 'log' driver (emails saved to storage/logs)
+# For production, configure SMTP or use services like Mailgun, SendGrid, etc.
+# ==============================================================================
+
+# Mail Driver
+# Options: smtp, sendmail, mailgun, ses, postmark, resend, log, array, failover
+# For development: log (saves emails to storage/logs/laravel.log)
+# For production: smtp, mailgun, ses, or postmark
+MAIL_MAILER=log
+
+# SMTP Configuration (when using 'smtp' driver)
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+
+# Mail From Address (sender email)
+MAIL_FROM_ADDRESS="noreply@kashilms.com"
+
+# Mail From Name (sender name)
+MAIL_FROM_NAME="${APP_NAME}"
+
+# ==============================================================================
+# AWS CONFIGURATION (Optional - for S3 storage)
+# ==============================================================================
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+# ==============================================================================
+# STRIPE PAYMENT CONFIGURATION
+# ==============================================================================
+#
+# REQUIRED for payment processing
+# 
+# Setup Instructions:
+# 1. Sign up at https://stripe.com
+# 2. Get your API keys from Dashboard > Developers > API keys
+# 3. Use test keys for development (starts with pk_test_ and sk_test_)
+# 4. Use live keys for production (starts with pk_live_ and sk_live_)
+#
+# Features using Stripe:
+# - Course enrollment payments
+# - Class booking payments
+# - Event registration payments
+# ==============================================================================
+
+# Stripe Publishable Key (public key - safe to expose in frontend)
+STRIPE_KEY=pk_test_your_stripe_publishable_key_here
+
+# Stripe Secret Key (private key - NEVER expose this)
+STRIPE_SECRET=sk_test_your_stripe_secret_key_here
+
+# ==============================================================================
+# VIMEO VIDEO HOSTING CONFIGURATION
+# ==============================================================================
+#
+# REQUIRED for video course content
+#
+# Setup Instructions:
+# 1. Sign up at https://vimeo.com
+# 2. Create an app at https://developer.vimeo.com/apps
+# 3. Get your Client ID, Client Secret, and Access Token
+# 4. The application uses Vimeo to host and stream course videos
+#
+# Features using Vimeo:
+# - Recorded lecture videos
+# - Course preview videos
+# - Video activity tracking
+# ==============================================================================
+
+# Vimeo Client ID
+VIMEO_CLIENT=your_vimeo_client_id_here
+
+# Vimeo Client Secret
+VIMEO_SECRET=your_vimeo_client_secret_here
+
+# Vimeo Access Token
+VIMEO_ACCESS=your_vimeo_access_token_here
+
+# Alternative Vimeo Configuration (if needed)
+VIMEO_ALT_CLIENT=
+VIMEO_ALT_SECRET=
+VIMEO_ALT_ACCESS=
+
+# ==============================================================================
+# MICROSOFT/AZURE OAUTH CONFIGURATION
+# ==============================================================================
+#
+# OPTIONAL - for Microsoft account login
+#
+# Setup Instructions:
+# 1. Go to https://portal.azure.com
+# 2. Create an Azure AD App Registration
+# 3. Set redirect URI: http://localhost/auth/microsoft/callback
+# 4. Get Client ID and Client Secret
+#
+# Features using Microsoft OAuth:
+# - Microsoft account login
+# - Calendar integration (Microsoft Calendar sync)
+# ==============================================================================
+
+# Azure Client ID
+AZURE_CLIENT_ID=your_azure_client_id_here
+
+# Azure Client Secret
+AZURE_CLIENT_SECRET=your_azure_client_secret_here
+
+# ==============================================================================
+# VITE FRONTEND BUILD CONFIGURATION
+# ==============================================================================
+
+# Vite App Name (used for asset compilation)
+VITE_APP_NAME="${APP_NAME}"
+
+# ==============================================================================
+# SETUP INSTRUCTIONS
+# ==============================================================================
+#
+# 1. INSTALL DEPENDENCIES:
+#    composer install
+#    npm install
+#
+# 2. CONFIGURE ENVIRONMENT:
+#    - Copy this file to .env (if not already done)
+#    - Update database credentials above
+#    - Generate application key: php artisan key:generate
+#
+# 3. SETUP DATABASE:
+#    - Create database in phpMyAdmin
+#    - Run migrations: php artisan migrate
+#    - (Optional) Seed data: php artisan db:seed
+#
+# 4. CONFIGURE SERVICES:
+#    - Stripe: Add your API keys for payment processing
+#    - Vimeo: Add credentials for video hosting
+#    - Microsoft: Add credentials for OAuth (optional)
+#    - Mail: Configure SMTP for production emails
+#
+# 5. BUILD FRONTEND ASSETS:
+#    - Development: npm run dev
+#    - Production: npm run build
+#
+# 6. START DEVELOPMENT SERVER:
+#    - php artisan serve
+#    - Or use: composer run dev (runs server + queue + vite)
+#
+# 7. ACCESS APPLICATION:
+#    - Open: http://localhost:8000
+#
+# ==============================================================================
+# PRODUCTION CHECKLIST
+# ==============================================================================
+#
+# Before deploying to production:
+#
+# [ ] Set APP_ENV=production
+# [ ] Set APP_DEBUG=false
+# [ ] Set APP_URL to your production domain
+# [ ] Use strong database credentials
+# [ ] Configure production mail driver (SMTP/Mailgun/etc.)
+# [ ] Use Stripe live keys
+# [ ] Use production Vimeo credentials
+# [ ] Set up SSL certificate (HTTPS)
+# [ ] Configure queue workers
+# [ ] Set up Redis/Memcached for caching
+# [ ] Configure file storage (S3 for production)
+# [ ] Set up backup system
+# [ ] Configure monitoring and logging
+# [ ] Review security settings
+#
+# ==============================================================================
+# SUPPORT & DOCUMENTATION
+# ==============================================================================
+#
+# Laravel Documentation: https://laravel.com/docs
+# Livewire Documentation: https://livewire.laravel.com/docs
+# Stripe Documentation: https://stripe.com/docs
+# Vimeo API Documentation: https://developer.vimeo.com/api
+#
+# ==============================================================================
