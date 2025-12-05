@@ -1,1 +1,1 @@
-<h1> FREEDOM House </h1>
+<h1> Kashi LMS </h1>
